@@ -1,10 +1,14 @@
 package entities
 
-import "fmt"
+import (
+	"fmt"
+	"sync"
+)
 
 type List struct {
 	Head *Node
 	Size int
+	Mx   *sync.Mutex
 }
 
 type Node struct {
@@ -16,6 +20,7 @@ func NewList() *List {
 	return &List{
 		Head: nil,
 		Size: 0,
+		Mx:   &sync.Mutex{},
 	}
 }
 
@@ -28,12 +33,16 @@ func (l *List) IsEmpty() bool {
 }
 
 func (l *List) InsertAtStart(value int) {
+	l.Mx.Lock()
+	defer l.Mx.Unlock()
 	l.Head = &Node{value, l.Head}
 	l.Size++
 }
 
 func (l *List) InsertAtEnd(value int) {
 	newNode := &Node{value, nil}
+	l.Mx.Lock()
+	defer l.Mx.Unlock()
 
 	if l.Head == nil {
 		l.Head = newNode
@@ -54,6 +63,9 @@ func (l *List) InsertAtEnd(value int) {
 
 func (l *List) InsertSorted(value int) {
 	newNode := &Node{value, nil}
+	l.Mx.Lock()
+	defer l.Mx.Unlock()
+
 	scroll := l.Head
 
 	if scroll == nil || scroll.Value > value {
@@ -75,10 +87,6 @@ func (l *List) InsertSorted(value int) {
 	scroll = nil
 }
 
-func (l *List) InsertAtPosition(value int, position int) {
-
-}
-
 func (l *List) displayList() {
 	scroll := l.Head
 	for scroll != nil {
@@ -98,6 +106,8 @@ func (l *List) isSortedDescending() bool {
 }
 
 func (l *List) IsPresent(value int) bool {
+	l.Mx.Lock()
+	defer l.Mx.Unlock()
 	tmp := l.Head
 
 	for tmp != nil {
