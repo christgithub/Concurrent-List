@@ -72,11 +72,6 @@ func TestList_InsertSorted(t *testing.T) {
 	}
 }
 
-func TestList_InsertAtPosition(t *testing.T) {
-	list := NewList()
-	list.InsertAtPosition(14, 4)
-}
-
 func TestList_IsPresent(t *testing.T) {
 	list := NewList()
 

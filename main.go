@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	"sync"
 
 	"github.com/MyProjects/Concurrent-List/entities"
@@ -31,16 +29,7 @@ func main() {
 		l.InsertSorted(144)
 		l.InsertSorted(280)
 	}()
-
-	displayList(l)
 	wg.Wait()
-}
+	l.Display()
 
-func displayList(l *entities.List) {
-	scroll := l.Head
-	for scroll != nil {
-		fmt.Println(scroll.Value)
-		scroll = scroll.Next
-	}
-	scroll = nil
 }

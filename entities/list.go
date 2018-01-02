@@ -87,7 +87,7 @@ func (l *List) InsertSorted(value int) {
 	scroll = nil
 }
 
-func (l *List) displayList() {
+func (l *List) Display() {
 	scroll := l.Head
 	for scroll != nil {
 		fmt.Println(scroll.Value)
@@ -106,8 +106,6 @@ func (l *List) isSortedDescending() bool {
 }
 
 func (l *List) IsPresent(value int) bool {
-	l.Mx.Lock()
-	defer l.Mx.Unlock()
 	tmp := l.Head
 
 	for tmp != nil {
