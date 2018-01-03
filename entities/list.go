@@ -97,14 +97,6 @@ func (l *List) Display() {
 	scroll = nil
 }
 
-func (l *List) isSortedAscending() bool {
-	return false
-}
-
-func (l *List) isSortedDescending() bool {
-	return false
-}
-
 func (l *List) IsPresent(value int) bool {
 	tmp := l.Head
 
@@ -114,5 +106,46 @@ func (l *List) IsPresent(value int) bool {
 		}
 		tmp = tmp.Next
 	}
+	return false
+}
+
+func (l *List) RemoveHead() (int, bool) {
+	l.Mx.Lock()
+	defer l.Mx.Unlock()
+	if l.IsEmpty() {
+		fmt.Println("Error list is empty!")
+		return 0, false
+	}
+
+	tmpValue := l.Head.Value
+	l.Head = l.Head.Next
+	l.Size--
+	return tmpValue, true
+}
+
+func (l *List) DeleteNode(nodeValue int) bool {
+	l.Mx.Lock()
+	defer l.Mx.Unlock()
+	if l.IsEmpty() {
+		fmt.Println("Cannot delete from empty list!")
+		return false
+	}
+
+	if l.Head.Value == nodeValue {
+		l.Head = l.Head.Next
+		l.Size--
+		return true
+	}
+
+	scroll := l.Head
+	for scroll.Next != nil {
+		if scroll.Next.Value == nodeValue {
+			scroll.Next = scroll.Next.Next
+			l.Size--
+			return true
+		}
+		scroll = scroll.Next
+	}
+	fmt.Printf("Didn't find node value %d in the list!\n", nodeValue)
 	return false
 }

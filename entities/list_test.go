@@ -84,3 +84,70 @@ func TestList_IsPresent(t *testing.T) {
 	assert.True(t, list.IsPresent(67))
 	assert.False(t, list.IsPresent(54))
 }
+
+func TestList_RemoveHeadFromEmptyList(t *testing.T) {
+	list := NewList()
+	value, removed := list.RemoveHead()
+	assert.False(t, removed)
+	assert.Equal(t, 0, value)
+	assert.Nil(t, list.Head)
+}
+
+func TestList_RemoveHeadFromNonEmptyList(t *testing.T) {
+	list := NewList()
+	list.InsertAtStart(43)
+	list.InsertAtStart(12)
+	value, removed := list.RemoveHead()
+
+	assert.True(t, removed)
+	assert.NotNil(t, list.Head)
+	assert.Equal(t, 12, value)
+	assert.Equal(t, 1, list.GetSize())
+}
+
+func TestList_DeleteNodeFromEmptyList(t *testing.T) {
+	list := NewList()
+	deleted := list.DeleteNode(23)
+	assert.Nil(t, list.Head)
+	assert.False(t, deleted)
+}
+
+func TestList_DeleteNodeNotInList(t *testing.T) {
+	list := NewList()
+
+	list.InsertAtStart(43)
+	list.InsertAtStart(12)
+	list.InsertAtStart(43)
+	list.InsertAtStart(51)
+
+	deleted := list.DeleteNode(2)
+	assert.Equal(t, 4, list.GetSize())
+	assert.False(t, deleted)
+}
+
+func TestList_DeleteNodeHeadOfList(t *testing.T) {
+	list := NewList()
+
+	list.InsertAtStart(43)
+	list.InsertAtStart(12)
+	list.InsertAtStart(43)
+	list.InsertAtStart(51)
+
+	deleted := list.DeleteNode(43)
+	assert.Equal(t, 3, list.GetSize())
+	assert.True(t, deleted)
+}
+
+func TestList_DeleteNode(t *testing.T) {
+	list := NewList()
+
+	list.InsertAtStart(43)
+	list.InsertAtStart(12)
+	list.InsertAtStart(18)
+	list.InsertAtStart(51)
+
+	deleted := list.DeleteNode(18)
+	assert.Equal(t, 3, list.GetSize())
+	assert.True(t, deleted)
+	assert.False(t, list.IsPresent(18))
+}

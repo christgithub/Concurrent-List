@@ -18,6 +18,7 @@ func main() {
 		l.InsertSorted(3)
 		l.InsertSorted(14)
 		l.InsertSorted(28)
+		l.DeleteNode(3)
 	}()
 
 	wg.Add(1)
@@ -28,6 +29,7 @@ func main() {
 		l.InsertSorted(32)
 		l.InsertSorted(144)
 		l.InsertSorted(280)
+		l.DeleteNode(3)
 	}()
 	wg.Wait()
 	l.Display()

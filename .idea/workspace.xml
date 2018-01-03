@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1bf8526-7d2e-4d44-a1fe-45d406e4f7bd" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/entities/list.go" afterPath="$PROJECT_DIR$/entities/list.go" />
       <change beforePath="$PROJECT_DIR$/entities/list_test.go" afterPath="$PROJECT_DIR$/entities/list_test.go" />
@@ -18,14 +17,24 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Concurrent_List$TestList_DeleteNode_in_list_test_go.coverage" NAME="TestList_DeleteNode in list_test.go Coverage Results" MODIFIED="1514937720236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Concurrent_List$TestList_RemoveHeadFromNonEmptyList_in_list_test_go.coverage" NAME="TestList_RemoveHeadFromNonEmptyList in list_test.go Coverage Results" MODIFIED="1514935801317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Concurrent_List$go_test_github_com_MyProjects_Concurrent_List_entities.coverage" NAME="go test github.com/MyProjects/Concurrent-List/entities Coverage Results" MODIFIED="1514937742487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="0" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
       <file leaf-file-name="main.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="34" column="1" lean-forward="false" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-              <folding />
+            <state relative-caret-position="315">
+              <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+              <folding>
+                <element signature="e#14#83#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -33,8 +42,8 @@
       <file leaf-file-name="list.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/entities/list.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="89" column="20" lean-forward="true" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
+            <state relative-caret-position="770">
+              <caret line="148" column="56" lean-forward="false" selection-start-line="148" selection-start-column="56" selection-end-line="148" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -43,8 +52,8 @@
       <file leaf-file-name="list_test.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/entities/list_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2520">
-              <caret line="72" column="1" lean-forward="false" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
+            <state relative-caret-position="5180">
+              <caret line="148" column="33" lean-forward="false" selection-start-line="148" selection-start-column="33" selection-end-line="148" selection-end-column="33" />
               <folding>
                 <element signature="e#18#86#0" expanded="true" />
               </folding>
@@ -80,8 +89,8 @@
         <option value="$PROJECT_DIR$/entities/datastruct.go" />
         <option value="$PROJECT_DIR$/entities/node.go" />
         <option value="$PROJECT_DIR$/entities/list_test.go" />
-        <option value="$PROJECT_DIR$/entities/list.go" />
         <option value="$PROJECT_DIR$/main.go" />
+        <option value="$PROJECT_DIR$/entities/list.go" />
       </list>
     </option>
   </component>
@@ -150,7 +159,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go run main.go">
+  <component name="RunManager" selected="Go Build.go build main.go">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="LinkedList" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -158,38 +167,39 @@
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/" />
     </configuration>
-    <configuration name="go run main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
       <module name="LinkedList" />
       <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/main.go" />
     </configuration>
-    <configuration name="TestList_InsertAtEnd in list_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
+    <configuration name="TestList_DeleteNode in list_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
       <module name="LinkedList" />
       <working_directory value="$PROJECT_DIR$/entities" />
       <go_parameters value="-i" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="github.com/MyProjects/LinkedList/entities" />
-      <pattern value="^TestList_InsertAtEnd$" />
+      <package value="github.com/MyProjects/Concurrent-List/entities" />
+      <pattern value="^TestList_DeleteNode$" />
     </configuration>
-    <configuration name="TestList_InsertSorted in list_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
+    <configuration name="TestList_DeleteNodeHeadOfList in list_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
       <module name="LinkedList" />
       <working_directory value="$PROJECT_DIR$/entities" />
       <go_parameters value="-i" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="github.com/MyProjects/LinkedList/entities" />
-      <pattern value="^TestList_InsertSorted$" />
+      <package value="github.com/MyProjects/Concurrent-List/entities" />
+      <pattern value="^TestList_DeleteNodeHeadOfList$" />
     </configuration>
-    <configuration name="TestList_IsPresent in list_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
+    <configuration name="TestList_DeleteNodeNotInList in list_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
       <module name="LinkedList" />
       <working_directory value="$PROJECT_DIR$/entities" />
       <go_parameters value="-i" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="github.com/MyProjects/LinkedList/entities" />
-      <pattern value="^TestList_IsPresent$" />
+      <package value="github.com/MyProjects/Concurrent-List/entities" />
+      <pattern value="^TestList_DeleteNodeNotInList$" />
     </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
       <module name="LinkedList" />
@@ -244,19 +254,19 @@
       <envs />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Go Build.go run main.go" />
-      <item index="1" class="java.lang.String" itemvalue="Go Test.TestList_InsertAtEnd in list_test.go" />
-      <item index="2" class="java.lang.String" itemvalue="Go Test.TestList_InsertSorted in list_test.go" />
-      <item index="3" class="java.lang.String" itemvalue="Go Test.TestList_IsPresent in list_test.go" />
-      <item index="4" class="java.lang.String" itemvalue="Go Test.go test github.com/MyProjects/Concurrent-List/entities" />
+      <item index="0" class="java.lang.String" itemvalue="Go Test.TestList_DeleteNode in list_test.go" />
+      <item index="1" class="java.lang.String" itemvalue="Go Test.TestList_DeleteNodeNotInList in list_test.go" />
+      <item index="2" class="java.lang.String" itemvalue="Go Test.TestList_DeleteNodeHeadOfList in list_test.go" />
+      <item index="3" class="java.lang.String" itemvalue="Go Test.go test github.com/MyProjects/Concurrent-List/entities" />
+      <item index="4" class="java.lang.String" itemvalue="Go Build.go build main.go" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Go Build.go run main.go" />
+        <item index="0" class="java.lang.String" itemvalue="Go Build.go build main.go" />
         <item index="1" class="java.lang.String" itemvalue="Go Test.go test github.com/MyProjects/Concurrent-List/entities" />
-        <item index="2" class="java.lang.String" itemvalue="Go Test.TestList_IsPresent in list_test.go" />
-        <item index="3" class="java.lang.String" itemvalue="Go Test.TestList_InsertSorted in list_test.go" />
-        <item index="4" class="java.lang.String" itemvalue="Go Test.TestList_InsertAtEnd in list_test.go" />
+        <item index="2" class="java.lang.String" itemvalue="Go Test.TestList_DeleteNode in list_test.go" />
+        <item index="3" class="java.lang.String" itemvalue="Go Test.TestList_DeleteNodeHeadOfList in list_test.go" />
+        <item index="4" class="java.lang.String" itemvalue="Go Test.TestList_DeleteNodeNotInList in list_test.go" />
       </list>
     </recent_temporary>
   </component>
@@ -264,34 +274,34 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestList_InsertSorted_in_list_test_go - 2017.12.30 at 18h 17m 50s.xml">
-      <configuration name="TestList_InsertSorted in list_test.go" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestList_DeleteNodeHeadOfList_in_list_test_go - 2018.01.02 at 23h 59m 56s.xml">
+      <configuration name="TestList_DeleteNodeHeadOfList in list_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestList_InsertSorted_in_list_test_go - 2017.12.30 at 18h 18m 05s.xml">
-      <configuration name="TestList_InsertSorted in list_test.go" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestList_DeleteNodeNotInList_in_list_test_go - 2018.01.02 at 23h 56m 32s.xml">
+      <configuration name="TestList_DeleteNodeNotInList in list_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestList_InsertSorted_in_list_test_go - 2017.12.30 at 18h 19m 31s.xml">
-      <configuration name="TestList_InsertSorted in list_test.go" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestList_DeleteNodeNotInList_in_list_test_go - 2018.01.02 at 23h 57m 15s.xml">
+      <configuration name="TestList_DeleteNodeNotInList in list_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestList_InsertSorted_in_list_test_go - 2017.12.30 at 18h 20m 12s.xml">
-      <configuration name="TestList_InsertSorted in list_test.go" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestList_DeleteNodeNotInList_in_list_test_go - 2018.01.02 at 23h 58m 15s.xml">
+      <configuration name="TestList_DeleteNodeNotInList in list_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestList_InsertSorted_in_list_test_go - 2017.12.30 at 18h 20m 17s.xml">
-      <configuration name="TestList_InsertSorted in list_test.go" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestList_DeleteNodeNotInList_in_list_test_go - 2018.01.02 at 23h 58m 46s.xml">
+      <configuration name="TestList_DeleteNodeNotInList in list_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestList_IsPresent_in_list_test_go - 2017.12.30 at 18h 56m 04s.xml">
-      <configuration name="TestList_IsPresent in list_test.go" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestList_DeleteNode_in_list_test_go - 2018.01.02 at 23h 54m 24s.xml">
+      <configuration name="TestList_DeleteNode in list_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestList_IsPresent_in_list_test_go - 2017.12.30 at 18h 56m 58s.xml">
-      <configuration name="TestList_IsPresent in list_test.go" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestList_DeleteNode_in_list_test_go - 2018.01.03 at 00h 01m 37s.xml">
+      <configuration name="TestList_DeleteNode in list_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestList_IsPresent_in_list_test_go - 2017.12.30 at 19h 00m 11s.xml">
-      <configuration name="TestList_IsPresent in list_test.go" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestList_DeleteNode_in_list_test_go - 2018.01.03 at 00h 02m 00s.xml">
+      <configuration name="TestList_DeleteNode in list_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="go_test_github_com_MyProjects_Concurrent-List_entities - 2018.01.02 at 23h 04m 58s.xml">
+    <history-entry file="go_test_github_com_MyProjects_Concurrent-List_entities - 2018.01.03 at 00h 02m 17s.xml">
       <configuration name="go test github.com/MyProjects/Concurrent-List/entities" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="go_test_github_com_MyProjects_Concurrent-List_entities - 2018.01.02 at 23h 06m 23s.xml">
+    <history-entry file="go_test_github_com_MyProjects_Concurrent-List_entities - 2018.01.03 at 00h 02m 22s.xml">
       <configuration name="go test github.com/MyProjects/Concurrent-List/entities" configurationId="GoTestRunConfiguration" />
     </history-entry>
   </component>
@@ -305,6 +315,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18932748" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39948782" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -335,7 +346,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#14#83#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -361,7 +374,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-          <folding />
+          <folding>
+            <element signature="e#14#83#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -387,7 +402,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#14#83#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -413,7 +430,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#14#83#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -439,7 +458,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding />
+          <folding>
+            <element signature="e#14#83#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -448,7 +469,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
           <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding />
+          <folding>
+            <element signature="e#14#83#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -457,7 +480,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
           <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding />
+          <folding>
+            <element signature="e#14#83#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -473,8 +498,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/entities/list_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2520">
-          <caret line="72" column="1" lean-forward="false" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
+        <state relative-caret-position="5180">
+          <caret line="148" column="33" lean-forward="false" selection-start-line="148" selection-start-column="33" selection-end-line="148" selection-end-column="33" />
           <folding>
             <element signature="e#18#86#0" expanded="true" />
           </folding>
@@ -483,17 +508,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/entities/list.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="89" column="20" lean-forward="true" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
+        <state relative-caret-position="770">
+          <caret line="148" column="56" lean-forward="false" selection-start-line="148" selection-start-column="56" selection-end-line="148" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="34" column="1" lean-forward="false" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="315">
+          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding>
+            <element signature="e#14#83#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
