@@ -151,3 +151,50 @@ func TestList_DeleteNode(t *testing.T) {
 	assert.True(t, deleted)
 	assert.False(t, list.IsPresent(18))
 }
+
+func TestList_DeleteNodesOnEmptyList(t *testing.T) {
+	list := NewList()
+	deleted := list.DeleteNodes(23)
+	assert.Equal(t, 0, deleted)
+}
+
+func TestList_DeleteNodesOnInexistingValue(t *testing.T) {
+	list := NewList()
+	list.InsertAtStart(51)
+	list.InsertAtStart(43)
+	list.InsertAtStart(51)
+	list.InsertAtStart(12)
+	list.InsertAtStart(18)
+	list.InsertAtStart(51)
+
+	deleted := list.DeleteNodes(108)
+	assert.Equal(t, 0, deleted)
+	assert.Equal(t, 6, list.GetSize())
+}
+
+func TestList_DeleteNodes(t *testing.T) {
+	list := NewList()
+	list.InsertAtStart(51)
+	list.InsertAtStart(43)
+	list.InsertAtStart(51)
+	list.InsertAtStart(12)
+	list.InsertAtStart(51)
+	list.InsertAtStart(18)
+	//TODO Buggy if value is found on the last node
+
+	deleted := list.DeleteNodes(51)
+	assert.Equal(t, 3, deleted)
+	assert.Equal(t, 3, list.GetSize())
+}
+
+func TestList_Free(t *testing.T) {
+	list := NewList()
+	list.InsertAtStart(51)
+	list.InsertAtStart(43)
+	list.InsertAtStart(51)
+	list.InsertAtStart(12)
+	list.Free()
+
+	assert.True(t, list.IsEmpty())
+	assert.Nil(t, list.Head)
+}

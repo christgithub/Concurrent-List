@@ -5,6 +5,20 @@ import (
 	"sync"
 )
 
+type ListAdder interface {
+	GetSize() int
+	IsEmpty() bool
+	InsertAtStart(value int)
+	InsertAtEnd(value int)
+	InsertSorted(value int)
+	Display()
+	IsPresent(value int) bool
+	RemoveHead() (int, bool)
+	DeleteNode(nodeValue int) bool
+	DeleteNodes(value int) int
+	Free()
+}
+
 type List struct {
 	Head *Node
 	Size int
@@ -148,4 +162,37 @@ func (l *List) DeleteNode(nodeValue int) bool {
 	}
 	fmt.Printf("Didn't find node value %d in the list!\n", nodeValue)
 	return false
+}
+
+func (l *List) DeleteNodes(value int) int {
+	l.Mx.Lock()
+	defer l.Mx.Unlock()
+	counter := 0
+	scroll := l.Head
+
+	if scroll.Value == value {
+		scroll = scroll.Next
+		l.Head = scroll
+	}
+
+	if l.IsEmpty() == false {
+		for scroll != nil {
+			if scroll.Next != nil {
+				if scroll.Next.Value == value && scroll.Next != nil {
+					scroll.Next = scroll.Next.Next
+					l.Size--
+					counter++
+				}
+			}
+			scroll = scroll.Next
+		}
+	}
+	return counter
+}
+
+func (l *List) Free() {
+	l.Mx.Lock()
+	defer l.Mx.Unlock()
+	l.Head = nil
+	l.Size = 0
 }
